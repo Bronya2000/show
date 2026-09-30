@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xiaomi Air 2 | Lighter. Thinner. More You.</title>
+    <style>
+        * {
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', Inter, sans-serif;
+        }
+        body {
+            background-color: #fbfbfd;
+            color:#1d1d1f;
+            line-height:1.47;
+        }
+        nav {
+            position:sticky;
+            top:0;
+            backdrop-filter: blur(18px);
+            background:rgba(251,251,253,0.72);
+            padding:16px 60px;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            z-index:99;
+        }
+        .nav-logo {font-size:22px;font-weight:600;}
+        .nav-links a {
+            margin-left:32px;
+            color:#1d1d1f;
+            text-decoration:none;
+            font-size:15px;
+            transition:color 0.25s;
+        }
+        .nav-links a:hover {color:#0071e3;}
+
+        /* Hero Section */
+        .hero {
+            min-height:90vh;
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            justify-content:center;
+            text-align:center;
+            padding:40px 20px;
+        }
+        .hero h1 {
+            font-size:64px;
+            font-weight:600;
+            margin-bottom:12px;
+        }
+        .hero-sub {
+            font-size:24px;
+            color:#424245;
+            margin-bottom:22px;
+        }
+        .hero-desc {
+            font-size:18px;
+            color:#6e6e73;
+            max-width:620px;
+            margin-bottom:48px;
+        }
+        .hero-img {
+            width:min(880px, 94%);
+            border-radius:20px;
+            box-shadow:0 20px 60px rgba(0,0,0,0.08);
+        }
+
+        /* Bento Feature Grid (Apple style) */
+        .features-section {
+            padding:100px 40px;
+            max-width:1300px;
+            margin:0 auto;
+        }
+        .grid-bento {
+            display:grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap:24px;
+        }
+        .bento-card {
+            background:#ffffff;
+            border-radius:22px;
+            padding:42px;
+            min-height:340px;
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .bento-card:hover {
+            transform:scale(1.02);
+            box-shadow:0 14px 38px rgba(0,0,0,0.07);
+        }
+        .bento-card h3 {
+            font-size:28px;
+            margin-bottom:16px;
+        }
+        .bento-card p {
+            color:#515154;
+            font-size:17px;
+        }
+        .full-width-card {
+            grid-column: span 2;
+        }
+
+        /* Market Analysis Section (Xiaomi & Redmi competitor + market share) */
+        .market-section {
+            background:#ffffff;
+            padding:100px 40px;
+        }
+        .market-wrap {
+            max-width:1250px;
+            margin:0 auto;
+        }
+        .market-wrap h2 {
+            text-align:center;
+            font-size:44px;
+            margin-bottom:60px;
+        }
+        .two-col {
+            display:grid;
+            grid-template-columns: 1fr 1fr;
+            gap:40px;
+        }
+        .col-block {
+            padding:36px;
+            border-radius:22px;
+            background:#fbfbfd;
+        }
+        .col-block h3 {
+            font-size:28px;
+            margin-bottom:20px;
+        }
+        .stat-item {
+            margin-top:16px;
+            font-size:17px;
+        }
+        .stat-num {
+            font-weight:600;
+            color:#0071e3;
+        }
+
+        footer {
+            padding:40px;
+            text-align:center;
+            color:#86868b;
+            font-size:14px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-logo">xiaomi</div>
+        <div class="nav-links">
+            <a href=" ">Features</a >
+            <a href="#market">Market Analysis</a >
+            <a href="#spec">Specifications</a >
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1>Xiaomi Air 2</h1>
+        <p class="hero-sub">Lighter. Thinner. More You.</p >
+        <p class="hero-desc">The first phone with a built-in magnetic companion layer.</p >
+        < img class="hero-img" src="https://p3-flow-image-sign.byteimg.com/tos-cn-i-a9rns2rl98/31120041419e40389201200420003501~tplv-a9rns2rl98-image.image" alt="Xiaomi Air2 Poster">
+    </section>
+
+    <section id="features" class="features-section">
+        <div class="grid-bento">
+            <div class="bento-card">
+                <h3>Magnetic Companion Layer</h3>
+                <p>More than a case. A second layer of possibilities. Built-in magnetic layer attaches seamlessly. Multiple styles: Wallet, Stand, Power.</p >
+            </div>
+            <div class="bento-card">
+                <h3>Ultra Thin. All Day.</h3>
+                <p>5.8 mm | 145 g | 6.7" AMOLED Display. A lighter feel, a bigger difference.</p >
+            </div>
+            <div class="bento-card">
+                <h3>Pro-Grade Camera</h3>
+                <p>50MP Main Camera, 2x Optical Zoom, 4K Video Recording. Same vision. More possibilities.</p >
+            </div>
+            <div class="bento-card">
+                <h3>A Smarter, Greener Choice</h3>
+                <p>Recycled materials, lower carbon footprint. Less material. More impact.</p >
+            </div>
+        </div>
+    </section>
+
+    <section id="market" class="market-section">
+        <div class="market-wrap">
+            <h2>Xiaomi & Redmi Competitor & Market Analysis</h2>
+            <div class="two-col">
+                <div class="col-block">
+                    <h3>Xiaomi (Premium Line)</h3>
+                    <p><strong>Target Users:</strong> 25–40 years old urban white-collar, tech fans, Xiaomi IoT ecosystem users</p >
+                    <p><strong>Core Needs:</strong> Top performance, premium imaging, smooth system, cross-device smart home</p >
+                    <p><strong>Competitors:</strong> Honor, vivo, OPPO, Samsung</p >
+                    <div class="stat-item">Global Group Share: <span class="stat-num">13–14%</span> Top 3 worldwide</div>
+                    <div class="stat-item">China High-end (4k–5k): <span class="stat-num">24.7%</span> market leader</div>
+                </div>
+                <div class="col-block">
+                    <h3>Redmi (Cost-performance Line)</h3>
+                    <p><strong>Target Users:</strong> 18–30 students, young workers, budget-sensitive buyers</p >
+                    <p><strong>Core Needs:</strong> Low price, long battery, fast charging, gaming performance</p >
+                    <p><strong>Competitors:</strong> Realme, iQOO, OnePlus Ace, Honor X series</p >
+                    <div class="stat-item">Mid-low segment China share: <span class="stat-num">28.3%</span></div>
+                    <div class="stat-item">Rivals: Realme 15.6%, iQOO 11.2%</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="spec" class="features-section">
+        <div class="grid-bento">
+            <div class="bento-card full-width-card">
+                <h3>Spec Overview</h3>
+                <p>Magnetic Attachment | Ultra Slim | Multi-style Accessories | Recycled Materials</p >
+                <p>5.8mm thickness, 145g lightweight, 6.7 inch AMOLED, 50MP main camera with 2x optical zoom, 4K recording</p >
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Xiaomi Air 2. Designed for a more connected you.</p >
+        <p>© 2026 Xiaomi. All rights reserved.</p >
+    </footer>
+
+    <script>
+        // Smooth scroll animation for navigation links
+        document.querySelectorAll('.nav-links a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        })
+        // Hover parallax effect for hero image
+        const heroImg = document.querySelector('.hero-img');
+        document.querySelector('.hero').addEventListener('mousemove', (e)=>{
+            const rect = document.querySelector('.hero').getBoundingClientRect();
+            const x = e.clientX - rect.left - rect.width/2;
+            const y = e.clientY - rect.top - rect.height/2;
+            heroImg.style.transform = `translateX(${x*0.018}px) translateY(${y*0.018}px)`;
+        })
+    </script>
+</body>
+</html>
