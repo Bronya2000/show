@@ -1,251 +1,549 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Xiaomi Air 2 | Lighter. Thinner. More You.</title>
-    <style>
-        * {
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', Inter, sans-serif;
-        }
-        body {
-            background-color: #fbfbfd;
-            color:#1d1d1f;
-            line-height:1.47;
-        }
-        nav {
-            position:sticky;
-            top:0;
-            backdrop-filter: blur(18px);
-            background:rgba(251,251,253,0.72);
-            padding:16px 60px;
-            display:flex;
-            justify-content:space-between;
-            align-items:center;
-            z-index:99;
-        }
-        .nav-logo {font-size:22px;font-weight:600;}
-        .nav-links a {
-            margin-left:32px;
-            color:#1d1d1f;
-            text-decoration:none;
-            font-size:15px;
-            transition:color 0.25s;
-        }
-        .nav-links a:hover {color:#0071e3;}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>淘宝闪购 · 外卖行业竞争分析报告</title>
+  <!-- 引入字体，保持现代感 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        /* Hero Section */
-        .hero {
-            min-height:90vh;
-            display:flex;
-            flex-direction:column;
-            align-items:center;
-            justify-content:center;
-            text-align:center;
-            padding:40px 20px;
-        }
-        .hero h1 {
-            font-size:64px;
-            font-weight:600;
-            margin-bottom:12px;
-        }
-        .hero-sub {
-            font-size:24px;
-            color:#424245;
-            margin-bottom:22px;
-        }
-        .hero-desc {
-            font-size:18px;
-            color:#6e6e73;
-            max-width:620px;
-            margin-bottom:48px;
-        }
-        .hero-img {
-            width:min(880px, 94%);
-            border-radius:20px;
-            box-shadow:0 20px 60px rgba(0,0,0,0.08);
-        }
+    body {
+      background-color: #f8fafc;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.6;
+      color: #1e293b;
+      padding: 2rem 1rem;
+    }
 
-        /* Bento Feature Grid (Apple style) */
-        .features-section {
-            padding:100px 40px;
-            max-width:1300px;
-            margin:0 auto;
-        }
-        .grid-bento {
-            display:grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap:24px;
-        }
-        .bento-card {
-            background:#ffffff;
-            border-radius:22px;
-            padding:42px;
-            min-height:340px;
-            display:flex;
-            flex-direction:column;
-            justify-content:center;
-            transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        .bento-card:hover {
-            transform:scale(1.02);
-            box-shadow:0 14px 38px rgba(0,0,0,0.07);
-        }
-        .bento-card h3 {
-            font-size:28px;
-            margin-bottom:16px;
-        }
-        .bento-card p {
-            color:#515154;
-            font-size:17px;
-        }
-        .full-width-card {
-            grid-column: span 2;
-        }
+    .report-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 2rem;
+      box-shadow: 0 20px 35px -8px rgba(0, 0, 0, 0.07), 0 8px 10px -6px rgba(0, 0, 0, 0.02);
+      padding: 2.5rem 2.8rem;
+      border: 1px solid #e9eef3;
+    }
 
-        /* Market Analysis Section (Xiaomi & Redmi competitor + market share) */
-        .market-section {
-            background:#ffffff;
-            padding:100px 40px;
-        }
-        .market-wrap {
-            max-width:1250px;
-            margin:0 auto;
-        }
-        .market-wrap h2 {
-            text-align:center;
-            font-size:44px;
-            margin-bottom:60px;
-        }
-        .two-col {
-            display:grid;
-            grid-template-columns: 1fr 1fr;
-            gap:40px;
-        }
-        .col-block {
-            padding:36px;
-            border-radius:22px;
-            background:#fbfbfd;
-        }
-        .col-block h3 {
-            font-size:28px;
-            margin-bottom:20px;
-        }
-        .stat-item {
-            margin-top:16px;
-            font-size:17px;
-        }
-        .stat-num {
-            font-weight:600;
-            color:#0071e3;
-        }
+    /* 标题区域 */
+    .report-header {
+      margin-bottom: 2.5rem;
+      border-bottom: 2px solid #eef2f6;
+      padding-bottom: 1.5rem;
+    }
 
-        footer {
-            padding:40px;
-            text-align:center;
-            color:#86868b;
-            font-size:14px;
-        }
-    </style>
+    .report-header h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: #0b2b4a;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .report-header h1 span {
+      background: #eef6ff;
+      color: #0066cc;
+      font-size: 1rem;
+      font-weight: 600;
+      padding: 0.25rem 0.9rem;
+      border-radius: 40px;
+      letter-spacing: 0.3px;
+      border: 1px solid #cce4ff;
+      margin-left: 0.75rem;
+    }
+
+    .meta-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 0.75rem;
+      color: #5f6c80;
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    .meta-info .word-count {
+      background: #f1f5f9;
+      padding: 0.3rem 1rem;
+      border-radius: 30px;
+      color: #334155;
+      font-size: 0.9rem;
+    }
+
+    /* 概要卡片 */
+    .exec-summary {
+      background: linear-gradient(145deg, #f0f7ff, #f9fcff);
+      padding: 1.8rem 2rem;
+      border-radius: 1.5rem;
+      margin-bottom: 2.8rem;
+      border: 1px solid #d9e9ff;
+      box-shadow: 0 2px 8px rgba(0, 102, 204, 0.04);
+    }
+
+    .exec-summary h2 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #0a3d6b;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .exec-summary h2::before {
+      content: "◆";
+      color: #0066cc;
+      font-size: 1.2rem;
+    }
+
+    .exec-summary p {
+      color: #1e3a5f;
+      font-size: 1.02rem;
+      line-height: 1.7;
+    }
+
+    /* 网格布局：SWOT 和 五力/STP 等 */
+    .grid-2col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-bottom: 2.5rem;
+    }
+
+    /* 通用卡片 */
+    .section-card {
+      background: #ffffff;
+      border: 1px solid #e4eaf2;
+      border-radius: 1.5rem;
+      padding: 1.8rem 1.8rem 2rem;
+      transition: all 0.15s ease;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+    }
+
+    .section-card h2 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #0b2b4a;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      border-left: 4px solid #0066cc;
+      padding-left: 1rem;
+      line-height: 1.3;
+    }
+
+    .section-card h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #1e3a5f;
+      margin-top: 1.2rem;
+      margin-bottom: 0.7rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .section-card h3:first-of-type {
+      margin-top: 0;
+    }
+
+    .section-card p {
+      color: #2d3f57;
+      font-size: 0.98rem;
+      margin-bottom: 0.9rem;
+    }
+
+    /* SWOT 特有样式 */
+    .swot-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.2rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .swot-item {
+      background: #fafcff;
+      border-radius: 1rem;
+      padding: 1rem 1.2rem;
+      border-left: 3px solid;
+    }
+
+    .swot-s { border-left-color: #2e7d32; }
+    .swot-w { border-left-color: #c62828; }
+    .swot-o { border-left-color: #1565c0; }
+    .swot-t { border-left-color: #b85c00; }
+
+    .swot-item strong {
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #3e4a5c;
+      display: block;
+      margin-bottom: 0.35rem;
+    }
+
+    .swot-item p {
+      font-size: 0.92rem;
+      margin-bottom: 0;
+      color: #293b4f;
+    }
+
+    /* 五力列表和 PESTEL */
+    .force-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .force-list li {
+      padding: 0.75rem 0;
+      border-bottom: 1px solid #edf2f7;
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      font-size: 0.96rem;
+    }
+
+    .force-list li:last-child {
+      border-bottom: none;
+    }
+
+    .force-list .force-name {
+      font-weight: 600;
+      min-width: 130px;
+      color: #0f3b6a;
+    }
+
+    .force-list .force-desc {
+      color: #334155;
+    }
+
+    /* PESTEL 小标签 */
+    .pestel-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 0.8rem;
+      margin-top: 0.8rem;
+    }
+
+    .pestel-item {
+      background: #f9fcff;
+      border-radius: 0.8rem;
+      padding: 0.9rem 1rem;
+      border: 1px solid #deecfb;
+      font-size: 0.9rem;
+    }
+
+    .pestel-item strong {
+      display: block;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      color: #0066cc;
+      letter-spacing: 0.4px;
+      margin-bottom: 0.25rem;
+    }
+
+    /* STP 块 */
+    .stp-block p {
+      margin-bottom: 0.65rem;
+    }
+
+    .stp-block strong {
+      color: #0b3d6b;
+      font-weight: 600;
+    }
+
+    /* 对比判断区域——横跨整行 */
+    .comparison-section {
+      background: #f2f8ff;
+      border-radius: 1.5rem;
+      padding: 2rem 2rem 1.8rem;
+      margin: 2.5rem 0 1.5rem;
+      border: 1px solid #d2e5ff;
+    }
+
+    .comparison-section h2 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #0b2b4a;
+      margin-bottom: 1.2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      border-left: 4px solid #0066cc;
+      padding-left: 1rem;
+    }
+
+    .comparison-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-bottom: 1.8rem;
+    }
+
+    .company-card {
+      background: white;
+      border-radius: 1.2rem;
+      padding: 1.3rem 1.3rem 1.1rem;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+      border: 1px solid #e0ecfe;
+    }
+
+    .company-card h3 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 0.6rem;
+      color: #0f3b6a;
+    }
+
+    .company-card p {
+      font-size: 0.92rem;
+      color: #2e425b;
+      margin-bottom: 0;
+    }
+
+    .company-card.meituan h3 { color: #1b6b3f; }
+    .company-card.jd h3 { color: #c41230; }
+    .company-card.taobao h3 { color: #ff6a00; }
+
+    .final-judgement {
+      background: white;
+      border-radius: 1rem;
+      padding: 1.5rem 1.8rem;
+      border-left: 5px solid #0066cc;
+      font-size: 1rem;
+      color: #1d3853;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+    }
+
+    .final-judgement strong {
+      color: #004b99;
+    }
+
+    /* 引用列表 */
+    .reference-list {
+      margin-top: 2rem;
+      padding-top: 1rem;
+      border-top: 1px dashed #cbd5e1;
+      font-size: 0.9rem;
+      color: #64748b;
+    }
+
+    .reference-list span {
+      font-weight: 600;
+      color: #334155;
+      margin-right: 1rem;
+    }
+
+    .reference-list ul {
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      gap: 1.5rem;
+      margin-top: 0.5rem;
+    }
+
+    .reference-list li {
+      position: relative;
+      padding-left: 1rem;
+    }
+
+    .reference-list li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: #0066cc;
+      font-weight: 700;
+    }
+
+    /* 响应式 */
+    @media (max-width: 900px) {
+      .report-container {
+        padding: 2rem 1.5rem;
+      }
+      .grid-2col {
+        grid-template-columns: 1fr;
+      }
+      .comparison-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+      .swot-grid {
+        grid-template-columns: 1fr;
+      }
+      .report-header h1 {
+        font-size: 1.8rem;
+      }
+      .meta-info {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .force-list li {
+        flex-direction: column;
+        gap: 0.25rem;
+      }
+      .force-list .force-name {
+        min-width: auto;
+      }
+    }
+
+    /* 小点缀 */
+    .badge {
+      display: inline-block;
+      background: #e6f0ff;
+      color: #0055aa;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.2rem 0.6rem;
+      border-radius: 30px;
+      margin-left: 0.5rem;
+      vertical-align: middle;
+    }
+  </style>
 </head>
 <body>
-    <nav>
-        <div class="nav-logo">xiaomi</div>
-        <div class="nav-links">
-            <a href=" ">Features</a >
-            <a href="#market">Market Analysis</a >
-            <a href="#spec">Specifications</a >
+  <div class="report-container">
+    <!-- 页眉 -->
+    <div class="report-header">
+      <h1>
+        Food-Delivery Industry Competitive Analysis Report
+        <span>Taobao Flash</span>
+      </h1>
+      <div class="meta-info">
+        <div class="word-count">≈ 1080 words · 竞争分析</div>
+        <div style="font-weight: 400; color: #6f7d95;">SWOT · Porter's Five Forces · PESTEL · STP</div>
+      </div>
+    </div>
+
+    <!-- 执行摘要 -->
+    <div class="exec-summary">
+      <h2>Executive Summary</h2>
+      <p>
+        China’s food delivery market has formed a three-way competition among Meituan, JD Delivery and Taobao Flash under Alibaba. This report applies SWOT, Porter’s Five Forces, PESTEL and STP models to analyse Taobao Flash, and makes comparisons with its two main rivals. Taobao Flash gains core support from Alibaba’s e-commerce ecosystem, yet it lacks independent, mature takeaway delivery infrastructure compared with Meituan. After evaluating market share, revenue and long-term strategic potential, Meituan maintains the most sustainable competitive advantage. Taobao Flash is best positioned as an instant retail service bundled with online shopping, instead of a standalone food delivery platform.
+      </p>
+    </div>
+
+    <!-- 两列布局：左侧 SWOT，右侧 Porter's Five Forces -->
+    <div class="grid-2col">
+      <!-- SWOT 卡片 -->
+      <div class="section-card">
+        <h2>SWOT Analysis · Taobao Flash</h2>
+        <div class="swot-grid">
+          <div class="swot-item swot-s">
+            <strong>Strengths</strong>
+            <p>Alibaba’s large traffic pool (Taobao & Tmall), shared merchant resources, Alipay payment, one-stop instant purchase. Supply chain resources support offline cooperation.</p>
+          </div>
+          <div class="swot-item swot-w">
+            <strong>Weaknesses</strong>
+            <p>Late player, no dedicated rider team, not first choice for takeaway, far fewer exclusive catering merchants.</p>
+          </div>
+          <div class="swot-item swot-o">
+            <strong>Opportunities</strong>
+            <p>Growing instant retail demand; Alibaba’s offline local layout creates space for mixed delivery services.</p>
+          </div>
+          <div class="swot-item swot-t">
+            <strong>Threats</strong>
+            <p>Subsidy wars, Meituan’s loyal users, JD’s stable logistics, rising rider costs, stricter regulation.</p>
+          </div>
         </div>
-    </nav>
+        <!-- 补充叙述从原文提取（保持紧凑） -->
+        <p style="font-size:0.92rem; margin-top:0.8rem; color:#3f5570;">
+          <strong>Note:</strong> Taobao Flash leverages Alibaba’s ecosystem but faces structural gaps in dedicated delivery infrastructure. Its opportunity lies in instant retail, not pure food delivery.
+        </p>
+      </div>
 
-    <section class="hero">
-        <h1>Xiaomi Air 2</h1>
-        <p class="hero-sub">Lighter. Thinner. More You.</p >
-        <p class="hero-desc">The first phone with a built-in magnetic companion layer.</p >
-        < img class="hero-img" src="https://p3-flow-image-sign.byteimg.com/tos-cn-i-a9rns2rl98/31120041419e40389201200420003501~tplv-a9rns2rl98-image.image" alt="Xiaomi Air2 Poster">
-    </section>
+      <!-- Porter's Five Forces 卡片 -->
+      <div class="section-card">
+        <h2>Porter’s Five Forces · Industry</h2>
+        <ul class="force-list">
+          <li><span class="force-name">Threat of new entrants</span><span class="force-desc"><strong>Moderate.</strong> Building a delivery app is easy, but rider network & merchant sign-ups require massive capital.</span></li>
+          <li><span class="force-name">Rivalry among existing</span><span class="force-desc"><strong>Extremely intense.</strong> Meituan, JD Delivery, Taobao Flash fight via discounts, speed, merchant commission.</span></li>
+          <li><span class="force-name">Bargaining power of suppliers</span><span class="force-desc"><strong>Low.</strong> Small restaurants depend on platforms; famous chains have stronger negotiation.</span></li>
+          <li><span class="force-name">Bargaining power of buyers</span><span class="force-desc"><strong>Strong.</strong> Users switch freely for coupons & faster delivery; platforms must keep promotions.</span></li>
+          <li><span class="force-name">Threat of substitutes</span><span class="force-desc"><strong>Medium.</strong> Self-cooking & dine-in are alternatives, but can’t match fast, convenient meals when busy.</span></li>
+        </ul>
+      </div>
+    </div>
 
-    <section id="features" class="features-section">
-        <div class="grid-bento">
-            <div class="bento-card">
-                <h3>Magnetic Companion Layer</h3>
-                <p>More than a case. A second layer of possibilities. Built-in magnetic layer attaches seamlessly. Multiple styles: Wallet, Stand, Power.</p >
-            </div>
-            <div class="bento-card">
-                <h3>Ultra Thin. All Day.</h3>
-                <p>5.8 mm | 145 g | 6.7" AMOLED Display. A lighter feel, a bigger difference.</p >
-            </div>
-            <div class="bento-card">
-                <h3>Pro-Grade Camera</h3>
-                <p>50MP Main Camera, 2x Optical Zoom, 4K Video Recording. Same vision. More possibilities.</p >
-            </div>
-            <div class="bento-card">
-                <h3>A Smarter, Greener Choice</h3>
-                <p>Recycled materials, lower carbon footprint. Less material. More impact.</p >
-            </div>
+    <!-- 第二行：PESTEL + STP -->
+    <div class="grid-2col">
+      <!-- PESTEL 卡片 -->
+      <div class="section-card">
+        <h2>PESTEL Analysis</h2>
+        <div class="pestel-grid">
+          <div class="pestel-item"><strong>Political</strong>Rules protect riders’ rights, limit unfair competition.</div>
+          <div class="pestel-item"><strong>Economic</strong>Disposable income supports spending; inflation raises operation costs.</div>
+          <div class="pestel-item"><strong>Social</strong>Urban customers pursue convenience & multi-scene instant services.</div>
+          <div class="pestel-item"><strong>Technological</strong>Location tracking, big data dispatch, digital payment boost efficiency.</div>
+          <div class="pestel-item"><strong>Environmental</strong>Push for recyclable packaging & low-carbon delivery vehicles.</div>
+          <div class="pestel-item"><strong>Legal</strong>Data security laws & consumer protection rules standardise platforms.</div>
         </div>
-    </section>
+      </div>
 
-    <section id="market" class="market-section">
-        <div class="market-wrap">
-            <h2>Xiaomi & Redmi Competitor & Market Analysis</h2>
-            <div class="two-col">
-                <div class="col-block">
-                    <h3>Xiaomi (Premium Line)</h3>
-                    <p><strong>Target Users:</strong> 25–40 years old urban white-collar, tech fans, Xiaomi IoT ecosystem users</p >
-                    <p><strong>Core Needs:</strong> Top performance, premium imaging, smooth system, cross-device smart home</p >
-                    <p><strong>Competitors:</strong> Honor, vivo, OPPO, Samsung</p >
-                    <div class="stat-item">Global Group Share: <span class="stat-num">13–14%</span> Top 3 worldwide</div>
-                    <div class="stat-item">China High-end (4k–5k): <span class="stat-num">24.7%</span> market leader</div>
-                </div>
-                <div class="col-block">
-                    <h3>Redmi (Cost-performance Line)</h3>
-                    <p><strong>Target Users:</strong> 18–30 students, young workers, budget-sensitive buyers</p >
-                    <p><strong>Core Needs:</strong> Low price, long battery, fast charging, gaming performance</p >
-                    <p><strong>Competitors:</strong> Realme, iQOO, OnePlus Ace, Honor X series</p >
-                    <div class="stat-item">Mid-low segment China share: <span class="stat-num">28.3%</span></div>
-                    <div class="stat-item">Rivals: Realme 15.6%, iQOO 11.2%</div>
-                </div>
-            </div>
+      <!-- STP 卡片 -->
+      <div class="section-card stp-block">
+        <h2>STP · Taobao Flash</h2>
+        <p><strong>Segmentation:</strong> By user consumption habits.</p>
+        <p><strong>Target:</strong> Existing Taobao online shoppers who want instant delivery of food, fruit and daily goods — not only takeaway users.</p>
+        <p><strong>Positioning:</strong> Integrated instant retail entrance inside the Taobao app. Not aiming to beat Meituan on pure takeaway orders, but highlighting e‑commerce + local quick delivery.</p>
+        <p style="background:#eef6fe; padding:0.7rem 1rem; border-radius:0.8rem; margin-top:1rem; font-size:0.92rem;">
+          <strong>Key differentiator:</strong> “One-stop instant purchase” covering meals, snacks, groceries.
+        </p>
+      </div>
+    </div>
+
+    <!-- 对比与最终判断 (整行) -->
+    <div class="comparison-section">
+      <h2>Comparison and Final Judgement</h2>
+      <div class="comparison-grid">
+        <div class="company-card meituan">
+          <h3>Meituan</h3>
+          <p>Largest market share, stable revenue, mature rider network, deep local restaurant cooperation. Most sustainable competitive advantage.</p>
         </div>
-    </section>
-
-    <section id="spec" class="features-section">
-        <div class="grid-bento">
-            <div class="bento-card full-width-card">
-                <h3>Spec Overview</h3>
-                <p>Magnetic Attachment | Ultra Slim | Multi-style Accessories | Recycled Materials</p >
-                <p>5.8mm thickness, 145g lightweight, 6.7 inch AMOLED, 50MP main camera with 2x optical zoom, 4K recording</p >
-            </div>
+        <div class="company-card jd">
+          <h3>JD Delivery</h3>
+          <p>Benefits from JD’s logistics capability, performs well in fresh food delivery.</p>
         </div>
-    </section>
+        <div class="company-card taobao">
+          <h3>Taobao Flash</h3>
+          <p>Relies on Alibaba’s ecosystem traffic; takeaway is only one part of instant retail. Cannot match Meituan’s user stickiness in food delivery.</p>
+        </div>
+      </div>
+      <div class="final-judgement">
+        <strong>Conclusion:</strong> Taobao Flash should not copy Meituan’s takeaway-focused model. Its wisest strategy is to keep linking instant delivery with Taobao’s online retail, forming differentiated competition. Positioned as an instant retail service bundled with online shopping, not a standalone food delivery platform.
+      </div>
+    </div>
 
-    <footer>
-        <p>Xiaomi Air 2. Designed for a more connected you.</p >
-        <p>© 2026 Xiaomi. All rights reserved.</p >
-    </footer>
+    <!-- 参考文献（简写） -->
+    <div class="reference-list">
+      <span>Reference list (abridged):</span>
+      <ul>
+        <li>Alibaba Group annual report</li>
+        <li>China local life service industry research report</li>
+        <li>Public platform regulatory documents</li>
+      </ul>
+    </div>
 
-    <script>
-        // Smooth scroll animation for navigation links
-        document.querySelectorAll('.nav-links a').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        })
-        // Hover parallax effect for hero image
-        const heroImg = document.querySelector('.hero-img');
-        document.querySelector('.hero').addEventListener('mousemove', (e)=>{
-            const rect = document.querySelector('.hero').getBoundingClientRect();
-            const x = e.clientX - rect.left - rect.width/2;
-            const y = e.clientY - rect.top - rect.height/2;
-            heroImg.style.transform = `translateX(${x*0.018}px) translateY(${y*0.018}px)`;
-        })
-    </script>
+    <!-- 页脚装饰（可选） -->
+    <div style="margin-top: 1.5rem; font-size: 0.75rem; color: #98a6bb; text-align: right; border-top: 1px solid #edf2f7; padding-top: 1rem;">
+      Competitive Analysis Report · Taobao Flash · 2025
+    </div>
+  </div>
 </body>
 </html>
