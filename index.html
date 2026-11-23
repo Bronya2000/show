@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>淘宝闪购 · 外卖行业竞争分析报告</title>
-  <!-- 引入字体，保持现代感 -->
+  <title>咖啡 · 处理与烘焙  |  从樱桃到熟豆</title>
+  <!-- Google Fonts 提升排版质感 -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -16,533 +16,528 @@
     }
 
     body {
-      background-color: #f8fafc;
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      line-height: 1.6;
-      color: #1e293b;
-      padding: 2rem 1rem;
+      background-color: #F9F6F0; /* 暖白基底，像咖啡纸袋 */
+      font-family: 'Inter', sans-serif;
+      color: #2E241F;
+      line-height: 1.5;
+      padding: 2.5rem 1.5rem;
     }
 
-    .report-container {
-      max-width: 1200px;
+    .main-container {
+      max-width: 1280px;
       margin: 0 auto;
-      background: white;
-      border-radius: 2rem;
-      box-shadow: 0 20px 35px -8px rgba(0, 0, 0, 0.07), 0 8px 10px -6px rgba(0, 0, 0, 0.02);
-      padding: 2.5rem 2.8rem;
-      border: 1px solid #e9eef3;
     }
 
     /* 标题区域 */
-    .report-header {
-      margin-bottom: 2.5rem;
-      border-bottom: 2px solid #eef2f6;
-      padding-bottom: 1.5rem;
+    .page-header {
+      text-align: center;
+      margin-bottom: 3.5rem;
     }
 
-    .report-header h1 {
-      font-size: 2.2rem;
-      font-weight: 700;
+    .page-header h1 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+      font-size: 3.2rem;
       letter-spacing: -0.02em;
-      color: #0b2b4a;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      flex-wrap: wrap;
+      color: #3C2A21;
+      margin-bottom: 0.75rem;
     }
 
-    .report-header h1 span {
-      background: #eef6ff;
-      color: #0066cc;
-      font-size: 1rem;
-      font-weight: 600;
-      padding: 0.25rem 0.9rem;
-      border-radius: 40px;
-      letter-spacing: 0.3px;
-      border: 1px solid #cce4ff;
-      margin-left: 0.75rem;
-    }
-
-    .meta-info {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: 0.75rem;
-      color: #5f6c80;
-      font-weight: 500;
-      font-size: 0.95rem;
-    }
-
-    .meta-info .word-count {
-      background: #f1f5f9;
-      padding: 0.3rem 1rem;
-      border-radius: 30px;
-      color: #334155;
-      font-size: 0.9rem;
-    }
-
-    /* 概要卡片 */
-    .exec-summary {
-      background: linear-gradient(145deg, #f0f7ff, #f9fcff);
-      padding: 1.8rem 2rem;
-      border-radius: 1.5rem;
-      margin-bottom: 2.8rem;
-      border: 1px solid #d9e9ff;
-      box-shadow: 0 2px 8px rgba(0, 102, 204, 0.04);
-    }
-
-    .exec-summary h2 {
-      font-size: 1.4rem;
-      font-weight: 700;
-      color: #0a3d6b;
-      margin-bottom: 1rem;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .exec-summary h2::before {
-      content: "◆";
-      color: #0066cc;
-      font-size: 1.2rem;
-    }
-
-    .exec-summary p {
-      color: #1e3a5f;
-      font-size: 1.02rem;
-      line-height: 1.7;
-    }
-
-    /* 网格布局：SWOT 和 五力/STP 等 */
-    .grid-2col {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2rem;
-      margin-bottom: 2.5rem;
-    }
-
-    /* 通用卡片 */
-    .section-card {
-      background: #ffffff;
-      border: 1px solid #e4eaf2;
-      border-radius: 1.5rem;
-      padding: 1.8rem 1.8rem 2rem;
-      transition: all 0.15s ease;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
-    }
-
-    .section-card h2 {
-      font-size: 1.4rem;
-      font-weight: 700;
-      color: #0b2b4a;
-      margin-bottom: 1.5rem;
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-      border-left: 4px solid #0066cc;
-      padding-left: 1rem;
-      line-height: 1.3;
-    }
-
-    .section-card h3 {
+    .page-header .subhead {
       font-size: 1.1rem;
-      font-weight: 600;
-      color: #1e3a5f;
-      margin-top: 1.2rem;
-      margin-bottom: 0.7rem;
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
-    }
-
-    .section-card h3:first-of-type {
-      margin-top: 0;
-    }
-
-    .section-card p {
-      color: #2d3f57;
-      font-size: 0.98rem;
-      margin-bottom: 0.9rem;
-    }
-
-    /* SWOT 特有样式 */
-    .swot-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.2rem;
-      margin-bottom: 1.2rem;
-    }
-
-    .swot-item {
-      background: #fafcff;
-      border-radius: 1rem;
-      padding: 1rem 1.2rem;
-      border-left: 3px solid;
-    }
-
-    .swot-s { border-left-color: #2e7d32; }
-    .swot-w { border-left-color: #c62828; }
-    .swot-o { border-left-color: #1565c0; }
-    .swot-t { border-left-color: #b85c00; }
-
-    .swot-item strong {
-      font-size: 0.95rem;
+      color: #6F5B4F;
+      font-weight: 400;
       text-transform: uppercase;
-      letter-spacing: 0.5px;
-      color: #3e4a5c;
-      display: block;
-      margin-bottom: 0.35rem;
+      letter-spacing: 0.2em;
+      border-bottom: 1px solid #D9C7B0;
+      display: inline-block;
+      padding-bottom: 0.6rem;
     }
 
-    .swot-item p {
-      font-size: 0.92rem;
-      margin-bottom: 0;
-      color: #293b4f;
+    /* 通用section卡片样式 */
+    .section-card {
+      background: #FFFFFFF2;
+      backdrop-filter: blur(2px);
+      border-radius: 32px;
+      padding: 2.2rem 2rem;
+      margin-bottom: 3rem;
+      box-shadow: 0 12px 28px -8px rgba(60, 42, 33, 0.08), 0 4px 12px rgba(0,0,0,0.02);
+      border: 1px solid #EFE6DB;
     }
 
-    /* 五力列表和 PESTEL */
-    .force-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    .force-list li {
-      padding: 0.75rem 0;
-      border-bottom: 1px solid #edf2f7;
+    .section-title {
       display: flex;
+      align-items: baseline;
       gap: 1rem;
-      align-items: flex-start;
-      font-size: 0.96rem;
+      margin-bottom: 2rem;
     }
 
-    .force-list li:last-child {
-      border-bottom: none;
-    }
-
-    .force-list .force-name {
+    .section-title h2 {
+      font-family: 'Playfair Display', serif;
       font-weight: 600;
-      min-width: 130px;
-      color: #0f3b6a;
+      font-size: 2rem;
+      color: #3C2A21;
+      letter-spacing: -0.01em;
     }
 
-    .force-list .force-desc {
-      color: #334155;
+    .section-title .emojii-badge {
+      font-size: 1.8rem;
+      line-height: 1;
+      opacity: 0.9;
     }
 
-    /* PESTEL 小标签 */
-    .pestel-grid {
+    .section-title .divider {
+      flex: 1;
+      height: 2px;
+      background: linear-gradient(90deg, #E3D5C8, transparent);
+      margin-left: 0.5rem;
+    }
+
+    /* 处理法网格 —— 5种方法 */
+    .process-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-      gap: 0.8rem;
-      margin-top: 0.8rem;
-    }
-
-    .pestel-item {
-      background: #f9fcff;
-      border-radius: 0.8rem;
-      padding: 0.9rem 1rem;
-      border: 1px solid #deecfb;
-      font-size: 0.9rem;
-    }
-
-    .pestel-item strong {
-      display: block;
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      color: #0066cc;
-      letter-spacing: 0.4px;
-      margin-bottom: 0.25rem;
-    }
-
-    /* STP 块 */
-    .stp-block p {
-      margin-bottom: 0.65rem;
-    }
-
-    .stp-block strong {
-      color: #0b3d6b;
-      font-weight: 600;
-    }
-
-    /* 对比判断区域——横跨整行 */
-    .comparison-section {
-      background: #f2f8ff;
-      border-radius: 1.5rem;
-      padding: 2rem 2rem 1.8rem;
-      margin: 2.5rem 0 1.5rem;
-      border: 1px solid #d2e5ff;
-    }
-
-    .comparison-section h2 {
-      font-size: 1.4rem;
-      font-weight: 700;
-      color: #0b2b4a;
-      margin-bottom: 1.2rem;
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-      border-left: 4px solid #0066cc;
-      padding-left: 1rem;
-    }
-
-    .comparison-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 1.5rem;
-      margin-bottom: 1.8rem;
     }
 
-    .company-card {
-      background: white;
-      border-radius: 1.2rem;
-      padding: 1.3rem 1.3rem 1.1rem;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
-      border: 1px solid #e0ecfe;
+    .process-card {
+      background: #FEFCFA;
+      border-radius: 24px;
+      padding: 1.6rem 1.3rem;
+      border: 1px solid #EAE0D6;
+      transition: all 0.25s ease;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.01);
     }
 
-    .company-card h3 {
-      font-size: 1.15rem;
-      font-weight: 700;
-      margin-bottom: 0.6rem;
-      color: #0f3b6a;
+    .process-card:hover {
+      border-color: #C6B2A0;
+      box-shadow: 0 10px 20px -10px rgba(80, 60, 45, 0.15);
+      transform: translateY(-3px);
+      background: #FFFFFF;
     }
 
-    .company-card p {
-      font-size: 0.92rem;
-      color: #2e425b;
-      margin-bottom: 0;
+    .process-icon {
+      font-size: 2rem;
+      margin-bottom: 1rem;
     }
 
-    .company-card.meituan h3 { color: #1b6b3f; }
-    .company-card.jd h3 { color: #c41230; }
-    .company-card.taobao h3 { color: #ff6a00; }
-
-    .final-judgement {
-      background: white;
-      border-radius: 1rem;
-      padding: 1.5rem 1.8rem;
-      border-left: 5px solid #0066cc;
-      font-size: 1rem;
-      color: #1d3853;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
-    }
-
-    .final-judgement strong {
-      color: #004b99;
-    }
-
-    /* 引用列表 */
-    .reference-list {
-      margin-top: 2rem;
-      padding-top: 1rem;
-      border-top: 1px dashed #cbd5e1;
-      font-size: 0.9rem;
-      color: #64748b;
-    }
-
-    .reference-list span {
+    .process-card h3 {
+      font-size: 1.4rem;
       font-weight: 600;
-      color: #334155;
-      margin-right: 1rem;
+      letter-spacing: -0.01em;
+      margin-bottom: 0.4rem;
+      color: #2E241F;
     }
 
-    .reference-list ul {
+    .process-sub {
+      font-size: 0.8rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #A0846E;
+      margin-bottom: 1rem;
+      border-bottom: 1px dashed #D9CBBF;
+      padding-bottom: 0.6rem;
+    }
+
+    .process-desc {
+      font-size: 0.9rem;
+      color: #4D3E36;
+      margin-bottom: 1rem;
+    }
+
+    .flavor-tags {
       display: flex;
       flex-wrap: wrap;
-      list-style: none;
-      gap: 1.5rem;
+      gap: 0.4rem;
       margin-top: 0.5rem;
     }
 
-    .reference-list li {
-      position: relative;
-      padding-left: 1rem;
+    .flavor-tag {
+      background: #F2EBE3;
+      padding: 0.25rem 0.7rem;
+      border-radius: 30px;
+      font-size: 0.7rem;
+      font-weight: 500;
+      color: #5E4A3C;
+      letter-spacing: 0.01em;
+      border: 1px solid #E0D3C7;
     }
 
-    .reference-list li::before {
-      content: "•";
-      position: absolute;
-      left: 0;
-      color: #0066cc;
+    .origin-note {
+      margin-top: 1rem;
+      font-size: 0.75rem;
+      color: #8C7567;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+      font-weight: 450;
+    }
+
+    .origin-note span {
+      font-weight: 600;
+      color: #6F5443;
+    }
+
+    /* 现代发酵特殊样式 */
+    .process-card.modern {
+      background: #FAF4EE;
+      border-color: #D6C0AE;
+    }
+
+    /* 烘焙部分——两列布局 */
+    .roast-flex {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+
+    @media (max-width: 850px) {
+      .roast-flex {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+    }
+
+    /* 烘焙曲线/阶段 */
+    .roast-stages {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+
+    .stage-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 0.8rem 1rem;
+      background: #FCF9F6;
+      border-radius: 16px;
+      border-left: 5px solid #B28C74;
+      transition: 0.15s;
+    }
+
+    .stage-item:hover {
+      background: #F7F0EA;
+    }
+
+    .stage-temp {
       font-weight: 700;
+      font-size: 1rem;
+      min-width: 70px;
+      color: #6B4E3A;
+      letter-spacing: -0.01em;
+    }
+
+    .stage-info h4 {
+      font-weight: 600;
+      font-size: 1rem;
+      margin-bottom: 0.2rem;
+      color: #362A22;
+    }
+
+    .stage-info p {
+      font-size: 0.85rem;
+      color: #6A5548;
+    }
+
+    .first-crack {
+      border-left-color: #C46B3A;
+      background: #FEF5EE;
+    }
+
+    .second-crack {
+      border-left-color: #7A4A2E;
+      background: #F8EEE8;
+    }
+
+    /* 烘焙度卡片 */
+    .roast-levels {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .level-card {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      background: #FFFFFF;
+      border-radius: 18px;
+      padding: 1rem 1.3rem;
+      border: 1px solid #EADDD1;
+      transition: all 0.2s;
+    }
+
+    .level-card:hover {
+      border-color: #C8B2A0;
+      background: #FEFCFA;
+    }
+
+    .level-bean {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      box-shadow: inset 0 -2px 4px rgba(0,0,0,0.1), 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    .light-bean { background: #C49A6C; }
+    .medium-bean { background: #9C7A5B; }
+    .medium-dark-bean { background: #6B4F3A; }
+    .dark-bean { background: #3D2E26; }
+
+    .level-info {
+      flex: 1;
+    }
+
+    .level-info h4 {
+      font-weight: 700;
+      font-size: 1rem;
+      display: flex;
+      justify-content: space-between;
+      color: #2E241F;
+    }
+
+    .level-info h4 span {
+      font-weight: 500;
+      font-size: 0.8rem;
+      color: #A38777;
+    }
+
+    .level-info p {
+      font-size: 0.8rem;
+      color: #665248;
+      margin-top: 0.25rem;
+      line-height: 1.4;
+    }
+
+    /* 小标注 */
+    .temp-hint {
+      margin-top: 1.2rem;
+      background: #E9E0D7;
+      border-radius: 30px;
+      padding: 0.5rem 1rem;
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: #4C3F36;
+      display: inline-block;
+      letter-spacing: 0.02em;
+    }
+
+    /* 辅助图片或图标点缀 */
+    .bean-icon {
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      background: #B28C74;
+      border-radius: 50% 50% 50% 0;
+      transform: rotate(45deg);
+      margin-right: 4px;
+    }
+
+    /* 页脚 */
+    .footer-note {
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.8rem;
+      color: #A28E7E;
+      border-top: 1px solid #E5D8CD;
+      padding-top: 2rem;
+      letter-spacing: 0.02em;
     }
 
     /* 响应式 */
-    @media (max-width: 900px) {
-      .report-container {
-        padding: 2rem 1.5rem;
-      }
-      .grid-2col {
-        grid-template-columns: 1fr;
-      }
-      .comparison-grid {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-      }
-      .swot-grid {
-        grid-template-columns: 1fr;
-      }
-      .report-header h1 {
-        font-size: 1.8rem;
-      }
-      .meta-info {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.5rem;
-      }
-    }
-
-    @media (max-width: 500px) {
-      .force-list li {
-        flex-direction: column;
-        gap: 0.25rem;
-      }
-      .force-list .force-name {
-        min-width: auto;
-      }
-    }
-
-    /* 小点缀 */
-    .badge {
-      display: inline-block;
-      background: #e6f0ff;
-      color: #0055aa;
-      font-size: 0.75rem;
-      font-weight: 600;
-      padding: 0.2rem 0.6rem;
-      border-radius: 30px;
-      margin-left: 0.5rem;
-      vertical-align: middle;
+    @media (max-width: 600px) {
+      body { padding: 1.5rem 1rem; }
+      .section-card { padding: 1.5rem 1.2rem; }
+      .page-header h1 { font-size: 2.2rem; }
+      .section-title h2 { font-size: 1.6rem; }
+      .process-grid { grid-template-columns: 1fr; }
+      .stage-temp { min-width: 60px; }
     }
   </style>
 </head>
 <body>
-  <div class="report-container">
-    <!-- 页眉 -->
-    <div class="report-header">
-      <h1>
-        Food-Delivery Industry Competitive Analysis Report
-        <span>Taobao Flash</span>
-      </h1>
-      <div class="meta-info">
-        <div class="word-count">≈ 1080 words · 竞争分析</div>
-        <div style="font-weight: 400; color: #6f7d95;">SWOT · Porter's Five Forces · PESTEL · STP</div>
+  <div class="main-container">
+    <!-- 标题 -->
+    <header class="page-header">
+      <h1>从樱桃到熟豆</h1>
+      <div class="subhead">processing & roasting</div>
+    </header>
+
+    <!-- 第一部分：加工处理法 -->
+    <section class="section-card">
+      <div class="section-title">
+        <h2>加工处理法</h2>
+        <span class="emojii-badge">🍒</span>
+        <div class="divider"></div>
       </div>
-    </div>
 
-    <!-- 执行摘要 -->
-    <div class="exec-summary">
-      <h2>Executive Summary</h2>
-      <p>
-        China’s food delivery market has formed a three-way competition among Meituan, JD Delivery and Taobao Flash under Alibaba. This report applies SWOT, Porter’s Five Forces, PESTEL and STP models to analyse Taobao Flash, and makes comparisons with its two main rivals. Taobao Flash gains core support from Alibaba’s e-commerce ecosystem, yet it lacks independent, mature takeaway delivery infrastructure compared with Meituan. After evaluating market share, revenue and long-term strategic potential, Meituan maintains the most sustainable competitive advantage. Taobao Flash is best positioned as an instant retail service bundled with online shopping, instead of a standalone food delivery platform.
-      </p>
-    </div>
-
-    <!-- 两列布局：左侧 SWOT，右侧 Porter's Five Forces -->
-    <div class="grid-2col">
-      <!-- SWOT 卡片 -->
-      <div class="section-card">
-        <h2>SWOT Analysis · Taobao Flash</h2>
-        <div class="swot-grid">
-          <div class="swot-item swot-s">
-            <strong>Strengths</strong>
-            <p>Alibaba’s large traffic pool (Taobao & Tmall), shared merchant resources, Alipay payment, one-stop instant purchase. Supply chain resources support offline cooperation.</p>
+      <div class="process-grid">
+        <!-- 水洗 -->
+        <article class="process-card">
+          <div class="process-icon">💧</div>
+          <h3>水洗</h3>
+          <div class="process-sub">Washed</div>
+          <p class="process-desc">去果皮果肉，发酵洗掉果胶，冲洗干燥。干净通透，酸质明亮，花香、柑橘感强。</p>
+          <div class="flavor-tags">
+            <span class="flavor-tag">花香</span>
+            <span class="flavor-tag">柑橘</span>
+            <span class="flavor-tag">明亮酸</span>
           </div>
-          <div class="swot-item swot-w">
-            <strong>Weaknesses</strong>
-            <p>Late player, no dedicated rider team, not first choice for takeaway, far fewer exclusive catering merchants.</p>
+          <div class="origin-note"><span>📍</span> 哥伦比亚 · 肯尼亚</div>
+        </article>
+
+        <!-- 日晒 -->
+        <article class="process-card">
+          <div class="process-icon">☀️</div>
+          <h3>日晒</h3>
+          <div class="process-sub">Natural</div>
+          <p class="process-desc">整颗咖啡樱桃直接晒干，果肉糖分渗入豆子。甜感高，果香浓郁，莓果、红酒发酵感。</p>
+          <div class="flavor-tags">
+            <span class="flavor-tag">莓果</span>
+            <span class="flavor-tag">红酒</span>
+            <span class="flavor-tag">高甜</span>
           </div>
-          <div class="swot-item swot-o">
-            <strong>Opportunities</strong>
-            <p>Growing instant retail demand; Alibaba’s offline local layout creates space for mixed delivery services.</p>
+          <div class="origin-note"><span>📍</span> 埃塞俄比亚 · 巴西</div>
+        </article>
+
+        <!-- 蜜处理 -->
+        <article class="process-card">
+          <div class="process-icon">🍯</div>
+          <h3>蜜处理</h3>
+          <div class="process-sub">Honey</div>
+          <p class="process-desc">去皮，保留部分果胶再晾晒，分白蜜、黄蜜、红蜜、黑蜜。酸甜均衡，甜感柔和。</p>
+          <div class="flavor-tags">
+            <span class="flavor-tag">平衡</span>
+            <span class="flavor-tag">柔和甜</span>
+            <span class="flavor-tag">果胶感</span>
           </div>
-          <div class="swot-item swot-t">
-            <strong>Threats</strong>
-            <p>Subsidy wars, Meituan’s loyal users, JD’s stable logistics, rising rider costs, stricter regulation.</p>
+          <div class="origin-note"><span>📍</span> 哥斯达黎加</div>
+        </article>
+
+        <!-- 湿刨法 -->
+        <article class="process-card">
+          <div class="process-icon">🌧️</div>
+          <h3>湿刨法</h3>
+          <div class="process-sub">Giling Basah</div>
+          <p class="process-desc">印尼主流，半干燥后脱壳再晒干。低酸、醇厚，草本、香料调性，曼特宁即此工艺。</p>
+          <div class="flavor-tags">
+            <span class="flavor-tag">草本</span>
+            <span class="flavor-tag">香料</span>
+            <span class="flavor-tag">醇厚</span>
+          </div>
+          <div class="origin-note"><span>📍</span> 印度尼西亚 · 曼特宁</div>
+        </article>
+
+        <!-- 现代发酵处理 (稍宽一些) -->
+        <article class="process-card modern">
+          <div class="process-icon">🧪</div>
+          <h3>现代发酵</h3>
+          <div class="process-sub">厌氧 / CO₂浸渍</div>
+          <p class="process-desc">厌氧发酵、二氧化碳浸渍，风味更强烈、有特殊水果香气，精品豆常用。</p>
+          <div class="flavor-tags">
+            <span class="flavor-tag">强烈水果</span>
+            <span class="flavor-tag">特殊发酵</span>
+            <span class="flavor-tag">精品</span>
+          </div>
+          <div class="origin-note"><span>📍</span> 全球精品处理厂</div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 第二部分：烘焙 -->
+    <section class="section-card">
+      <div class="section-title">
+        <h2>烘焙 · 生豆到熟豆</h2>
+        <span class="emojii-badge">🔥</span>
+        <div class="divider"></div>
+      </div>
+
+      <div class="roast-flex">
+        <!-- 左侧：烘焙阶段 -->
+        <div class="roast-stages">
+          <div class="stage-item">
+            <div class="stage-temp">~150°C</div>
+            <div class="stage-info">
+              <h4>脱水阶段</h4>
+              <p>豆子失水，由绿转黄，干草味</p>
+            </div>
+          </div>
+          <div class="stage-item">
+            <div class="stage-temp">150–190°C</div>
+            <div class="stage-info">
+              <h4>美拉德反应</h4>
+              <p>产生坚果、焦糖香气</p>
+            </div>
+          </div>
+          <div class="stage-item first-crack">
+            <div class="stage-temp">≈195°C</div>
+            <div class="stage-info">
+              <h4>一爆 · 第一爆裂</h4>
+              <p>水汽膨胀开裂，浅烘/中烘大多在此前后出炉，果香、酸感突出</p>
+            </div>
+          </div>
+          <div class="stage-item second-crack">
+            <div class="stage-temp">约210–230°C</div>
+            <div class="stage-info">
+              <h4>二爆 · 第二爆裂</h4>
+              <p>结构二次断裂，油脂渗出，进入中深/深烘，酸味减弱，焦香、烟熏感变强</p>
+            </div>
+          </div>
+          <div class="stage-item" style="border-left-color: #6A8A7A; background: #F4F7F5;">
+            <div class="stage-temp">⚡ 出炉</div>
+            <div class="stage-info">
+              <h4>快速风冷</h4>
+              <p>立刻终止烘焙，锁定风味</p>
+            </div>
+          </div>
+          <div class="temp-hint">
+            ⏱️ 烘焙温度区间 180–230℃ · 依豆种与烘焙师曲线调整
           </div>
         </div>
-        <!-- 补充叙述从原文提取（保持紧凑） -->
-        <p style="font-size:0.92rem; margin-top:0.8rem; color:#3f5570;">
-          <strong>Note:</strong> Taobao Flash leverages Alibaba’s ecosystem but faces structural gaps in dedicated delivery infrastructure. Its opportunity lies in instant retail, not pure food delivery.
-        </p>
-      </div>
 
-      <!-- Porter's Five Forces 卡片 -->
-      <div class="section-card">
-        <h2>Porter’s Five Forces · Industry</h2>
-        <ul class="force-list">
-          <li><span class="force-name">Threat of new entrants</span><span class="force-desc"><strong>Moderate.</strong> Building a delivery app is easy, but rider network & merchant sign-ups require massive capital.</span></li>
-          <li><span class="force-name">Rivalry among existing</span><span class="force-desc"><strong>Extremely intense.</strong> Meituan, JD Delivery, Taobao Flash fight via discounts, speed, merchant commission.</span></li>
-          <li><span class="force-name">Bargaining power of suppliers</span><span class="force-desc"><strong>Low.</strong> Small restaurants depend on platforms; famous chains have stronger negotiation.</span></li>
-          <li><span class="force-name">Bargaining power of buyers</span><span class="force-desc"><strong>Strong.</strong> Users switch freely for coupons & faster delivery; platforms must keep promotions.</span></li>
-          <li><span class="force-name">Threat of substitutes</span><span class="force-desc"><strong>Medium.</strong> Self-cooking & dine-in are alternatives, but can’t match fast, convenient meals when busy.</span></li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- 第二行：PESTEL + STP -->
-    <div class="grid-2col">
-      <!-- PESTEL 卡片 -->
-      <div class="section-card">
-        <h2>PESTEL Analysis</h2>
-        <div class="pestel-grid">
-          <div class="pestel-item"><strong>Political</strong>Rules protect riders’ rights, limit unfair competition.</div>
-          <div class="pestel-item"><strong>Economic</strong>Disposable income supports spending; inflation raises operation costs.</div>
-          <div class="pestel-item"><strong>Social</strong>Urban customers pursue convenience & multi-scene instant services.</div>
-          <div class="pestel-item"><strong>Technological</strong>Location tracking, big data dispatch, digital payment boost efficiency.</div>
-          <div class="pestel-item"><strong>Environmental</strong>Push for recyclable packaging & low-carbon delivery vehicles.</div>
-          <div class="pestel-item"><strong>Legal</strong>Data security laws & consumer protection rules standardise platforms.</div>
+        <!-- 右侧：烘焙分级 -->
+        <div class="roast-levels">
+          <div class="level-card">
+            <div class="level-bean light-bean"></div>
+            <div class="level-info">
+              <h4>浅烘 <span>Light</span></h4>
+              <p>浅棕，表面无油。果酸、花香、茶感明显，适合手冲、美式。</p>
+            </div>
+          </div>
+          <div class="level-card">
+            <div class="level-bean medium-bean"></div>
+            <div class="level-info">
+              <h4>中烘 <span>Medium</span></h4>
+              <p>栗棕色，酸甜平衡，坚果、巧克力、焦糖香。百搭，手冲、奶咖都合适。</p>
+            </div>
+          </div>
+          <div class="level-card">
+            <div class="level-bean medium-dark-bean"></div>
+            <div class="level-info">
+              <h4>中深烘 <span>Medium-Dark</span></h4>
+              <p>棕褐色，少量出油，苦感上来，甜感扎实。</p>
+            </div>
+          </div>
+          <div class="level-card">
+            <div class="level-bean dark-bean"></div>
+            <div class="level-info">
+              <h4>深烘 <span>Dark</span></h4>
+              <p>深褐近黑色，大量出油，酸度很低，烟熏、黑巧克力，适合意式浓缩、拿铁。</p>
+            </div>
+          </div>
+          <div style="display: flex; justify-content: flex-end; margin-top: 0.5rem;">
+            <span style="font-size: 0.75rem; color: #A28E7E; background: #F3EDE6; padding: 0.35rem 1rem; border-radius: 30px;">🔥 一爆至二爆之间决定烘焙度</span>
+          </div>
         </div>
       </div>
+    </section>
 
-      <!-- STP 卡片 -->
-      <div class="section-card stp-block">
-        <h2>STP · Taobao Flash</h2>
-        <p><strong>Segmentation:</strong> By user consumption habits.</p>
-        <p><strong>Target:</strong> Existing Taobao online shoppers who want instant delivery of food, fruit and daily goods — not only takeaway users.</p>
-        <p><strong>Positioning:</strong> Integrated instant retail entrance inside the Taobao app. Not aiming to beat Meituan on pure takeaway orders, but highlighting e‑commerce + local quick delivery.</p>
-        <p style="background:#eef6fe; padding:0.7rem 1rem; border-radius:0.8rem; margin-top:1rem; font-size:0.92rem;">
-          <strong>Key differentiator:</strong> “One-stop instant purchase” covering meals, snacks, groceries.
-        </p>
-      </div>
-    </div>
-
-    <!-- 对比与最终判断 (整行) -->
-    <div class="comparison-section">
-      <h2>Comparison and Final Judgement</h2>
-      <div class="comparison-grid">
-        <div class="company-card meituan">
-          <h3>Meituan</h3>
-          <p>Largest market share, stable revenue, mature rider network, deep local restaurant cooperation. Most sustainable competitive advantage.</p>
-        </div>
-        <div class="company-card jd">
-          <h3>JD Delivery</h3>
-          <p>Benefits from JD’s logistics capability, performs well in fresh food delivery.</p>
-        </div>
-        <div class="company-card taobao">
-          <h3>Taobao Flash</h3>
-          <p>Relies on Alibaba’s ecosystem traffic; takeaway is only one part of instant retail. Cannot match Meituan’s user stickiness in food delivery.</p>
-        </div>
-      </div>
-      <div class="final-judgement">
-        <strong>Conclusion:</strong> Taobao Flash should not copy Meituan’s takeaway-focused model. Its wisest strategy is to keep linking instant delivery with Taobao’s online retail, forming differentiated competition. Positioned as an instant retail service bundled with online shopping, not a standalone food delivery platform.
-      </div>
-    </div>
-
-    <!-- 参考文献（简写） -->
-    <div class="reference-list">
-      <span>Reference list (abridged):</span>
-      <ul>
-        <li>Alibaba Group annual report</li>
-        <li>China local life service industry research report</li>
-        <li>Public platform regulatory documents</li>
-      </ul>
-    </div>
-
-    <!-- 页脚装饰（可选） -->
-    <div style="margin-top: 1.5rem; font-size: 0.75rem; color: #98a6bb; text-align: right; border-top: 1px solid #edf2f7; padding-top: 1rem;">
-      Competitive Analysis Report · Taobao Flash · 2025
+    <!-- 页脚备注 -->
+    <div class="footer-note">
+      ☕ 咖啡樱桃 → 生豆 → 熟豆 · 工艺与风味
     </div>
   </div>
 </body>
